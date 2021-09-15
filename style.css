@@ -1,0 +1,178 @@
+body{
+    float: left;
+    width: 100%;
+    background: #444;
+}
+.ceiling-fan{
+    float: left;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+.ceiling-fan::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+    background: #fff;
+    box-shadow: inset 0 0px 0px 8px #fff, inset 0 1px 5px 22px #383838;
+}
+.ceiling-fan > div {
+    display: block;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: inset 1px 1px 40px #d7d7d7;
+}
+.ceiling-fan .fan-01{
+    width: auto;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    transform: skewX(20deg);
+}
+.ceiling-fan .fan-left{
+    left: 0;
+    right: 50%;
+    border-radius: 40% 80px 15px 100%;
+}
+.ceiling-fan .fan-right{
+    right: 0;
+    left: 50%;
+    border-radius: 40% 80px 15px 100%;
+}
+.ceiling-fan .fan-02{
+    width: 50px;
+    height: auto;
+    left: 50%;
+    margin-left: -25px;
+    transform: skewY(20deg);
+}
+.ceiling-fan .fan-top{
+    top: 0;
+    bottom: 50%;
+    border-radius: 40% 80px 15px 100%;
+}
+.ceiling-fan .fan-bottom{
+    top: 50%;
+    bottom: 0;
+    border-radius: 40% 80px 15px 100%;
+}
+
+.start
+{
+    animation:spin linear infinite;
+    animation-duration: 1s;
+
+}
+
+@keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .string-container {
+    width: 50px;
+    height: 125px;
+    overflow: hidden;
+    position: absolute;
+    left: 25%;
+    transform: translateX(-25%);
+}
+.string-right{
+    left: 75%;
+    transform: translateX(-75%);
+}
+.string {
+    cursor: pointer;
+    width: 50px;
+    height: 125px;
+    margin-top: -15px;
+    position: relative;
+    -webkit-animation: swing 10s ease-in-out 0s infinite;
+    animation: swing 10s ease-in-out 0s infinite;
+    transform-origin: 50% 0;
+    transition: left 0.25s;
+}
+.chain {
+    border-left: 1px dotted #fff;
+    width: 2px;
+    height: 120px;
+    margin-left: 24px;
+    top: -25px;
+    position: absolute;
+}
+/* .string:hover .chain{
+    top: 0;
+}
+.string:hover .nob{
+    bottom: -12px;
+} */
+.nob {
+    background: linear-gradient(
+140deg, #808080 0%, #dadada 100%);
+    border-radius: 5px;
+    width: 10px;
+    height: 18px;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    
+}
+.fan-container{
+    float: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes swing {
+    0% {
+      transform: rotate(-5deg);
+    }
+    10% {
+      transform: rotate(3deg);
+    }
+    20% {
+      transform: rotate(-2deg);
+    }
+    30% {
+      transform: rotate(1deg);
+    }
+    40% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+    60% {
+      transform: rotate(-1deg);
+    }
+    70% {
+      transform: rotate(2deg);
+    }
+    80% {
+      transform: rotate(-3deg);
+    }
+    90% {
+      transform: rotate(3deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+  .string.ui-draggable-dragging {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    /* -webkit-animation-play-state: paused; */
+            /* animation-play-state: paused; */
+  }
+  
