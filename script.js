@@ -6,7 +6,7 @@ var slide = 0;
 var pull = 1;
 var reverse01 = 0;
 var stringPull = function(){
-    console.log(pull);
+    
     switch(pull)
     {
         case 0 : 
@@ -47,7 +47,7 @@ var stringRightPull = function(){
 }
 
 stringLeft.addEventListener("dragstart",()=>{
-    console.log(stringLeft.children[0].children[0].className)
+    
     stringLeft.children[0].children[0].style.top = '0';
     stringLeft.children[0].children[1].style.bottom = '-12px';
     stringPull();
